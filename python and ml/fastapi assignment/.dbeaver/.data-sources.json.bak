@@ -1,0 +1,43 @@
+{
+	"folders": {},
+	"connections": {
+		"sqlite_jdbc-1848a30d7dc-3cb2eeb011a53650": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "sql_app.db",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "/home/ayuyadav/Desktop/python and ml/fastapi assignment/sql_app.db",
+				"url": "jdbc:sqlite:/home/ayuyadav/Desktop/python and ml/fastapi assignment/sql_app.db",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"sqlite_jdbc-1849eb71771-434170b14f288f3": {
+			"provider": "sqlite",
+			"driver": "sqlite_jdbc",
+			"name": "Untitled Document 1",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "/home/ayuyadav/Desktop/python and ml/Django/Untitled Document 1",
+				"url": "jdbc:sqlite:/home/ayuyadav/Desktop/python and ml/Django/Untitled Document 1",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>JiraSub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color:#4DB6AC;">
+<nav class="navbar navbar-light" style="background-color:#FF0033;">
+    <a href="#" class="navbar-brand" style="background-color:#FFCC33;color:#000000;border-width:10px;border-color:#FFCC33;border-style:solid;border-spacing:30px;border-radius: 5px;">Library App</a>
+    <a class="navbar-link btn-lg" href="{% url 'index' %}" style="background-color:#FFCC33;color:#000000;">DataFlair</a>
+<a href="{% url 'admin:index' %}" class = 'navbar-link btn-lg' style="background-color:#FFCC33;color:#000000;">Admin</a>
+    <a href="{% url 'upload-isssues' %}" class="navbar-link btn-lg" style="background-color:#FFCC33;color:#000000;">Upload Issues</a>
+</nav>
+<br>
+{% block content %}
+<div class="card-columns">
+    {% for isssues in shelf %}
+    <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ isssues.title }}</h5>
+    <p class="card-text">{{ isssues.author }}</p>
+    <p class="card-text">{{ isssues.project }}</p>
+    <p class="card-text">{{ isssues.text }}</p>
+    <p class="card-text">{{ isssues.issuetype }}</p>
+    <p class="card-text">{{ isssues.status }}</p>
+    <p class="card-text">{{ isssues.created_date }}</p>
+   <div class="card-footer bg-transparent border-dark">
+   <p class="card-title">{{isssues.author}}</p>
+   <center>
+       <a href="update/{{isssues.id}}" class="btn btn-warning" id = '{{isssues.id}}'>edit</a>
+       <a href="delete/{{isssues.id}}" class="btn btn-danger" id = '{{isssues.id}}'>delete</a>
+    </center>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
